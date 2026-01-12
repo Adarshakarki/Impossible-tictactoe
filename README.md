@@ -1,4 +1,4 @@
-# Impossible Tic-Tac-Toe (Glitch Edition)
+# Impossible Tic-Tac-Toe
 A high-stakes, dark-mode Tic-Tac-Toe game where the Bot literally cannot lose. The game masquerades as a standard 3x3 match, but if the player manages to reach a draw, the grid "glitches" and expands to a 5xtimes 5$ layout, allowing the Bot to claim an instant victory from the hidden outer ring.
 
 ## Features
@@ -9,5 +9,8 @@ A high-stakes, dark-mode Tic-Tac-Toe game where the Bot literally cannot lose. T
 * Precision Graphics: Uses SVG coordinates to ensure the winning strike line is never offset, regardless of screen size.
   
 ## Images
-![Image1](images/Screenshot_2026-01-12_145322.png)
-![Image2](images/Screenshot_2026-01-12_145338.png)
+![blank one](images/Screenshot%202026-01-12%20145322.png)
+
+![bot winning](images/Screenshot%202026-01-12%20145338.png)
+
+### Play Game
