@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impossible Dark TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="status" class="status">YOUR TURN</div>
+        
+        <div class="board-wrapper">
+            <div class="grid-5x5" id="board"></div>
+            <svg class="strike-svg">
+                <line x1="0" y1="0" x2="0" y2="0" id="strikeLine" />
+            </svg>
+        </div>
+
+        <button class="reset-btn" onclick="initGame()">RESET MATCH</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

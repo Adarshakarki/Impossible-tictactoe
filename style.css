@@ -1,0 +1,139 @@
+:root {
+    --bg-dark: #0a0a0c;
+    --card-bg: #161b22;
+    --highlight: #bef264; /* Your lime green */
+    --text-dim: #8b949e;
+    --cell-size: 75px;
+    --strike-red: #ff4d4d;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #30363d;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+}
+
+/* The Board Wrapper now hides its true size */
+.board-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.grid-5x5 {
+    display: grid;
+    grid-template-columns: repeat(5, var(--cell-size));
+    grid-template-rows: repeat(5, var(--cell-size));
+    gap: 10px;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background: #21262d;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+}
+
+/* Start State: Highlight only inner 3x3 */
+.cell.inner {
+    background: var(--highlight);
+    color: black;
+}
+
+/* Hide outer cells completely */
+.cell.outer {
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
+}
+
+/* Expansion Reveal */
+.grid-5x5.revealed .cell.outer {
+    opacity: 1;
+    transform: scale(1);
+    background: #30363d;
+}
+
+/* When a cell wins, it matches your highlight color */
+.cell.winner {
+    background: var(--highlight) !important;
+    color: black !important;
+    box-shadow: 0 0 20px var(--highlight);
+    z-index: 5;
+}
+
+/* Fix Strike Line Position */
+.strike-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#strikeLine {
+    stroke: var(--strike-red);
+    stroke-width: 10;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px var(--strike-red));
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.strike-active #strikeLine {
+    stroke-dashoffset: 0;
+}
+
+.reset-btn {
+    margin-top: 40px;
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid #30363d;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.reset-btn:hover {
+    background: #21262d;
+    color: white;
+    border-color: var(--highlight);
+}
