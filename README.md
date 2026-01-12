@@ -14,3 +14,4 @@ A high-stakes, dark-mode Tic-Tac-Toe game where the Bot literally cannot lose. T
 ![bot winning](images/Screenshot%202026-01-12%20145338.png)
 
 ### Play Game
+https://adarshakarki.github.io/Impossible-tictactoe/
