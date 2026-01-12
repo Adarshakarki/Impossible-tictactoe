@@ -9,3 +9,5 @@ A high-stakes, dark-mode Tic-Tac-Toe game where the Bot literally cannot lose. T
 * Precision Graphics: Uses SVG coordinates to ensure the winning strike line is never offset, regardless of screen size.
   
 ## Images
+![Image1](images/Screenshot_2026-01-12_145322.png)
+![Image2](images/Screenshot_2026-01-12_145338.png)
